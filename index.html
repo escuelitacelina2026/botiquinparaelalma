@@ -138,6 +138,48 @@
     <footer style="text-align: center; padding: 60px; opacity: 0.5; font-size: 0.8rem;">
         &copy; 2026 Botiquín para el Alma <br> San Vicente, Buenos Aires.
     </footer>
+<script>
+    document.addEventListener('mousemove', function(e) {
+        crearDestello(e.pageX, e.pageY);
+    });
 
+    document.addEventListener('touchstart', function(e) {
+        crearDestello(e.touches[0].pageX, e.touches[0].pageY);
+    });
+
+    function crearDestello(x, y) {
+        const estrella = document.createElement('div');
+        estrella.innerHTML = '✨'; // Puedes cambiarlo por '⭐' o '✦'
+        estrella.style.position = 'absolute';
+        estrella.style.left = x + 'px';
+        estrella.style.top = y + 'px';
+        estrella.style.fontSize = Math.random() * (20 - 10) + 10 + 'px';
+        estrella.style.color = '#d4af37';
+        estrella.style.textShadow = '0 0 5px #fff, 0 0 10px #d4af37';
+        estrella.style.pointerEvents = 'none';
+        estrella.style.zIndex = '9999';
+        estrella.style.transition = 'all 1s ease-out';
+        
+        document.body.appendChild(estrella);
+
+        // Animación de dispersión
+        setTimeout(() => {
+            estrella.style.transform = `translate(${(Math.random() - 0.5) * 100}px, ${(Math.random() - 0.5) * 100}px) scale(0)`;
+            estrella.style.opacity = '0';
+        }, 10);
+
+        // Limpiar el elemento del código para que no sea pesada la página
+        setTimeout(() => {
+            estrella.remove();
+        }, 1000);
+    }
+</script>
+
+<style>
+    /* Estilo para que los destellos no interfieran con los clics */
+    body {
+        overflow-x: hidden; /* Evita scroll lateral por los destellos */
+    }
+</style>
 </body>
 </html>
