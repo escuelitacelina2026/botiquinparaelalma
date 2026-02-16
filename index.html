@@ -10,9 +10,9 @@
         body { background-color: var(--dark); color: var(--white); font-family: 'Montserrat', sans-serif; margin: 0; scroll-behavior: smooth; overflow-x: hidden; }
         header { background: #000; padding: 40px 20px; text-align: center; border-bottom: 3px solid var(--gold); }
         
-        /* LOGO */
-        .logo-img { max-width: 200px; height: auto; margin-bottom: 15px; filter: drop-shadow(0 0 5px var(--gold)); animation: levitate 3s ease-in-out infinite; }
-        @keyframes levitate { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        /* LOGO CON ANIMACIÓN */
+        .logo-img { max-width: 180px; height: auto; margin-bottom: 15px; filter: drop-shadow(0 0 8px var(--gold)); animation: levitate 3s ease-in-out infinite; }
+        @keyframes levitate { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 
         h1 { font-family: 'Cinzel', serif; color: var(--gold); margin: 0; font-size: 2.2rem; }
         nav { background: #1a1a1a; text-align: center; padding: 15px; position: sticky; top: 0; border-bottom: 1px solid var(--gold); z-index: 1000; }
@@ -22,13 +22,13 @@
         .service-card { background: rgba(255,255,255,0.05); margin: 10px 0; padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; border-left: 5px solid var(--gold); }
         .price { color: var(--gold); font-weight: bold; min-width: 100px; text-align: right; }
         
-        /* TALLER DETALLADO */
+        /* TALLER */
         .taller-box { border: 2px solid var(--gold); padding: 30px; background: rgba(212, 175, 55, 0.05); border-radius: 15px; margin-top: 20px; }
         .check-list { list-style: none; padding: 0; text-align: left; }
         .check-list li { margin-bottom: 10px; padding-left: 25px; position: relative; }
-        .check-list li::before { content: '✅'; position: absolute; left: 0; }
+        .check-list li::before { content: '✨'; position: absolute; left: 0; }
         
-        .btn-ws { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 15px; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-ws { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 15px; font-weight: bold; transition: 0.3s; border: none; }
         .btn-ws:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
         
         .grid-bio { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
@@ -41,7 +41,7 @@
 <body>
 
     <header>
-        <img src="botiquin.png" alt="Logo" class="logo-img">
+        <img src="botiquin.png" alt="Logo Botiquín para el Alma" class="logo-img">
         <h1>Botiquín para el Alma</h1>
         <p style="color: var(--soft-gold); font-style: italic;">Daniela y Jacqueline Pignatelli - Terapeutas Holísticas</p>
     </header>
@@ -58,18 +58,17 @@
             <h2 class="category-title">💫 Sanación y Limpieza</h2>
             <div class="service-card"><span>Limpieza Energética Personal - Mesa Cuántica</span><span class="price">$40.000</span></div>
             <div class="service-card"><span>Limpieza Personal + Protocolos Especiales</span><span class="price">$50.000</span></div>
-            
-            <h2 class="category-title">🏠 Limpieza de Espacios</h2>
-            <div class="service-card"><span>Limpieza de Hogares 🏠 (Según dimensión)</span><span class="price">Desde $40.000</span></div>
-            <div class="service-card"><span>Limpieza de Negocios 🏢 (Según dimensión)</span><span class="price">Desde $40.000</span></div>
+            <div class="service-card"><span>Limpieza de Hogares 🏠</span><span class="price">Desde $40.000</span></div>
+            <div class="service-card"><span>Limpieza de Negocios 🏢</span><span class="price">Desde $40.000</span></div>
 
             <h2 class="category-title">🌌 Canalización</h2>
             <div class="service-card"><span>Liberación Almas Desencarnadas + Mensaje Mediumnico 🕊️</span><span class="price">$45.000</span></div>
-            <div class="service-card"><span>Traducción de la Luz - (Registros Akáshicos)</span><span class="price">$45.000</span></div>
+            <div class="service-card"><span>Traducción de la Luz (Registros Akáshicos)</span><span class="price">$45.000</span></div>
 
             <h2 class="category-title">💫 Acompañamiento Terapéutico</h2>
-            <div class="service-card"><span>Sesiones de Coaching Integral Transformacional</span><span class="price">$35.000</span></div>
-            <div class="service-card)<span>Constelaciones Individuales</span><span class="price">$50.000</span></div>
+            <div class="service-card"><span>Coaching Integral Transformacional</span><span class="price">$35.000</span></div>
+            <div class="service-card"><span>Constelaciones Individuales</span><span class="price">$50.000</span></div>
+            <div class="service-card"><span>Biodecodificación</span><span class="price">$35.000</span></div>
 
             <h2 class="category-title">🌟 Información del Ser</h2>
             <div class="service-card"><span>Numerología Transgeneracional + Mensaje Oráculo</span><span class="price">$20.000</span></div>
@@ -80,30 +79,30 @@
         </section>
 
         <section id="talleres">
-            <h2 class="category-title">📚 Formaciones y Talleres</h2>
+            <h2 class="category-title">📚 Taller Destacado</h2>
             <div class="taller-box">
-                <span style="background: var(--gold); color: black; padding: 4px 12px; font-weight: bold; border-radius: 4px;">DISPONIBLE FEBRERO/MARZO</span>
+                <span style="background: var(--gold); color: black; padding: 4px 12px; font-weight: bold; border-radius: 4px;">DISPONIBLE!</span>
                 <h3 style="font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--gold); margin: 20px 0;">🛸 TALLER PÉNDULO EXPRESS ✨</h3>
                 <p>Tu puerta de entrada al mundo de la Radiestesia. Diseñé este taller para que domines el péndulo con seguridad, confianza y precisión.</p>
                 
                 <h4 style="color: var(--gold);">🌟 ¿PARA QUIÉN ES ESTE TALLER?</h4>
                 <ul class="check-list">
                     <li>Terapeutas que buscan una herramienta de diagnóstico efectiva.</li>
-                    <li>Principiantes que desean iniciarse desde cero.</li>
+                    <li>Principiantes que desean iniciarse en terapias alternativas desde cero.</li>
                     <li>Buscadores que quieran respuestas claras en su guía diaria.</li>
                 </ul>
 
                 <h4 style="color: var(--gold);">🔥 LO QUE RECIBÍS:</h4>
                 <ul class="check-list">
-                    <li><strong>🔑 ACCESO AULA VIRTUAL (3 meses):</strong> Plataforma interactiva.</li>
-                    <li><strong>📥 PDF MAESTRO DE POR VIDA:</strong> Material técnico descargable.</li>
-                    <li><strong>🎓 MÉTODO PRÁCTICO:</strong> Limpieza, consagración y Chakras.</li>
-                    <li><strong>🤝 ASESORÍA PERSONALIZADA:</strong> Soporte durante un mes.</li>
+                    <li>🔑 Acceso Aula Virtual (3 meses).</li>
+                    <li>📥 PDF Maestro de por vida.</li>
+                    <li>🎓 Método práctico de limpieza, consagración y respuestas.</li>
+                    <li>🤝 Asesoría personalizada durante un mes.</li>
                 </ul>
 
                 <div style="background: rgba(212, 175, 55, 0.2); padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center;">
                     <p style="margin: 0; font-size: 1.3rem;"><strong>VALOR PROMO: $35.000</strong></p>
-                    <p style="margin: 5px 0 0 0; font-size: 0.8rem;">⏳ Válido hasta fines de Marzo</p>
+                    <p style="margin: 5px 0 0 0; font-size: 0.8rem;">⏳ Válido Febrero - Marzo</p>
                 </div>
                 
                 <div style="text-align: center;">
@@ -156,16 +155,17 @@
             estrella.style.zIndex = '9999';
             estrella.style.transition = 'all 0.8s ease-out';
             document.body.appendChild(estrella);
-
             setTimeout(() => {
-                estrella.style.transform = `translate(${(Math.random() - 0.5) * 50}px, ${(Math.random() - 0.5) * 50}px) scale(0)`;
+                estrella.style.transform = `translate(${(Math.random() - 0.5) * 60}px, ${(Math.random() - 0.5) * 60}px) scale(0)`;
                 estrella.style.opacity = '0';
-            }, 10);
+            }, 20);
             setTimeout(() => { estrella.remove(); }, 800);
         }
-
         document.addEventListener('mousemove', (e) => crearDestello(e.pageX, e.pageY));
-        document.addEventListener('touchstart', (e) => crearDestello(e.touches[0].pageX, e.touches[0].pageY));
+        document.addEventListener('touchstart', (e) => {
+            const touch = e.touches[0];
+            crearDestello(touch.pageX, touch.pageY);
+        });
     </script>
 </body>
 </html>
