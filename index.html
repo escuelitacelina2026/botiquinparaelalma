@@ -1,32 +1,137 @@
-<section id="nosotras">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botiquín para el Alma</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --gold: #d4af37; --dark: #121212; --soft-gold: #f4e4bc; --white: #ffffff; }
+        body { background-color: var(--dark); color: var(--white); font-family: 'Montserrat', sans-serif; margin: 0; scroll-behavior: smooth; }
+        header { background: #000; padding: 50px 20px; text-align: center; border-bottom: 3px solid var(--gold); }
+        h1 { font-family: 'Cinzel', serif; color: var(--gold); margin: 0; font-size: 2.2rem; }
+        nav { background: #1a1a1a; text-align: center; padding: 15px; position: sticky; top: 0; border-bottom: 1px solid var(--gold); z-index: 1000; }
+        nav a { color: var(--soft-gold); text-decoration: none; margin: 0 15px; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
+        .category-title { font-family: 'Cinzel', serif; color: var(--gold); border-bottom: 1px solid var(--gold); margin-top: 40px; padding-bottom: 10px; }
+        .service-card { background: rgba(255,255,255,0.05); margin: 10px 0; padding: 15px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; border-left: 5px solid var(--gold); }
+        .price { color: var(--gold); font-weight: bold; min-width: 100px; text-align: right; }
+        
+        /* TALLER DETALLADO */
+        .taller-box { border: 2px solid var(--gold); padding: 30px; background: rgba(212, 175, 55, 0.05); border-radius: 15px; margin-top: 20px; }
+        .check-list { list-style: none; padding: 0; }
+        .check-list li { margin-bottom: 10px; padding-left: 25px; position: relative; }
+        .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: bold; }
+        
+        .btn-ws { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 15px; font-weight: bold; transition: 0.3s; }
+        .grid-bio { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+        .bio-card { background: #1a1a1a; padding: 25px; border-radius: 10px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.3); }
+        .mantra-box { margin-top: 40px; padding: 30px; border: 1px solid var(--gold); background: rgba(212, 175, 55, 0.05); font-style: italic; text-align: center; line-height: 2; color: var(--soft-gold); border-radius: 15px; }
+        @media (max-width: 600px) { .service-card { flex-direction: column; text-align: center; } .price { text-align: center; margin-top: 10px; } .grid-bio { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Botiquín para el Alma</h1>
+        <p style="color: var(--soft-gold); font-style: italic;">Daniela y Jacqueline Pignatelli - Terapeutas Holísticas</p>
+    </header>
+
+    <nav>
+        <a href="#sesiones">Sesiones</a>
+        <a href="#talleres">Talleres</a>
+        <a href="#nosotras">Nosotras</a>
+    </nav>
+
+    <div class="container">
+        
+        <section id="sesiones">
+            <h2 class="category-title">💫 Sanación y Limpieza</h2>
+            <div class="service-card"><span>Sanación Reiki a Distancia</span><span class="price">$35.000</span></div>
+            <div class="service-card"><span>Limpieza Energética Personal (Mesa Cuántica)</span><span class="price">$40.000</span></div>
+            <div class="service-card"><span>Limpieza Personal + Protocolos Especiales</span><span class="price">$50.000</span></div>
+            <div class="service-card"><span>Sesión de Péndulo Hebreo</span><span class="price">$40.000</span></div>
+
+            <h2 class="category-title">🏠 Limpieza de Espacios</h2>
+            <div class="service-card"><span>Limpieza de Hogares / Negocios</span><span class="price">Desde $40.000</span></div>
+
+            <h2 class="category-title">🌌 Canalización</h2>
+            <div class="service-card"><span>Liberación Almas + Mensaje Mediumnico 🕊️</span><span class="price">$45.000</span></div>
+            <div class="service-card"><span>Traducción de la Luz (Registros Akáshicos)</span><span class="price">$45.000</span></div>
+
+            <h2 class="category-title">💫 Acompañamiento Terapéutico</h2>
+            <div class="service-card"><span>Coaching Integral Transformacional</span><span class="price">$35.000</span></div>
+            <div class="service-card"><span>Biodecodificación</span><span class="price">$35.000</span></div>
+            <div class="service-card"><span>Constelaciones Individuales</span><span class="price">$50.000</span></div>
+
+            <h2 class="category-title">🔮 Consultas Oraculares</h2>
+            <div class="service-card"><span>Numerología Transgeneracional</span><span class="price">$35.000</span></div>
+            <div class="service-card"><span>Tarot Evolutivo Conductual</span><span class="price">$40.000</span></div>
+            <div class="service-card"><span>Sesiones de I Ching</span><span class="price">$45.000</span></div>
+        </section>
+
+        <section id="talleres">
+            <h2 class="category-title">📚 Formaciones Disponibles</h2>
+            <div class="taller-box">
+                <span style="background: var(--gold); color: black; padding: 4px 12px; font-weight: bold; border-radius: 4px; font-size: 0.8rem;">¡DISPONIBLE! - FEBRERO/MARZO</span>
+                <h3 style="font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--gold); margin: 20px 0 10px 0;">🛸 TALLER PÉNDULO EXPRESS ✨</h3>
+                <p><strong>Tu puerta de entrada al mundo de la Radiestesia.</strong><br>Diseñé este taller para que domines el péndulo con seguridad, confianza y precisión.</p>
+                
+                <h4 style="color: var(--gold);">🌟 ¿PARA QUIÉN ES ESTE TALLER?</h4>
+                <ul class="check-list">
+                    <li>Terapeutas que buscan una herramienta de diagnóstico efectiva.</li>
+                    <li>Principiantes que desean iniciarse en terapias alternativas desde cero.</li>
+                    <li>Buscadores que quieran respuestas claras en su guía diaria.</li>
+                    <li>Toda persona que sienta el llamado de conectar con su energía.</li>
+                </ul>
+
+                <h4 style="color: var(--gold);">🔥 LO QUE RECIBÍS:</h4>
+                <ul class="check-list">
+                    <li><strong>🔑 ACCESO AULA VIRTUAL (3 meses):</strong> Plataforma mística e interactiva.</li>
+                    <li><strong>📥 PDF MAESTRO DE POR VIDA:</strong> Material técnico para siempre.</li>
+                    <li><strong>🎓 MÉTODO PRÁCTICO:</strong> Limpieza, consagración, respuestas y Chakras.</li>
+                    <li><strong>🤝 ASESORÍA CON TERAPEUTAS:</strong> Soporte para dudas durante un mes.</li>
+                </ul>
+
+                <div style="background: rgba(212, 175, 55, 0.2); padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <p style="margin: 0; font-size: 1.2rem;"><strong>💎 VALOR PROMO LANZAMIENTO: $35.000</strong></p>
+                    <p style="margin: 5px 0 0 0; font-size: 0.8rem; opacity: 0.8;">⏳ Válido hasta fines de Marzo</p>
+                </div>
+                
+                <p>🚀 ¿Querés tu llave de acceso?</p>
+                <a href="https://wa.me/5491136434026?text=Hola!%20Quiero%20inscribirme%20al%20Taller%20de%20Pendulo%20Express%20🛸" target="_blank" class="btn-ws">Solicitar link de inscripción</a>
+            </div>
+        </section>
+
+        <div class="mantra-box">
+            <h3 style="font-family: 'Cinzel', serif; color: var(--gold); margin-top: 0;">✨ Mantra de Sanación Emocional</h3>
+            IN SA MA RI <br> IN SA MA RI <br> AT MI AT MI <br> SA LA MAN SHA <br> LA SI ON MI <br> IT MI ON IN <br> SA MA RI <br> AT MI AT MI <br> MARI.. <br> MI SAT MA RI
+        </div>
+
+        <section id="nosotras">
             <h2 class="category-title">🤝 Conectá con las Terapeutas</h2>
-            <p style="text-align: center; font-style: italic; margin-bottom: 30px; color: var(--soft-gold);">
-                "Nos unimos para brindarte un botiquín de herramientas que sanan el alma y expanden la conciencia."
-            </p>
-            
             <div class="grid-bio">
                 <div class="bio-card">
-                    <div style="font-size: 3rem; margin-bottom: 10px;">🛸</div>
-                    <h3 style="font-family: 'Cinzel', serif; margin: 0;">Jackie Pignatelli</h3>
-                    <p style="font-size: 0.9rem; color: var(--gold); margin-top: 5px;">Terapeuta Holística & Canalizadora</p>
-                    <p style="font-size: 0.85rem; padding: 0 10px;">Especialista en técnicas Arcturianas y limpiezas profundas del ser.</p>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
-                        <a href="https://instagram.com/nave.arcturiana" target="_blank" class="btn-ws" style="background: transparent; border: 1px solid var(--gold); margin: 0;">📸 Instagram</a>
-                        <a href="https://wa.me/5491136434026?text=Hola%20Jackie!%20Vengo%20desde%20la%20web%20Botiquín%20para%20el%20Alma%20✨" target="_blank" class="btn-ws" style="background: var(--gold); color: black; margin: 0;">💬 Consultar a Jackie</a>
-                    </div>
+                    <div style="font-size: 2.5rem;">🛸</div>
+                    <h3>Jackie Pignatelli</h3>
+                    <p style="color: var(--gold); font-size: 0.9rem;">@nave.arcturiana</p>
+                    <a href="https://instagram.com/nave.arcturiana" target="_blank" class="btn-ws" style="background: transparent; border: 1px solid var(--gold); margin-bottom: 10px; width: 80%;">Instagram</a>
+                    <a href="https://wa.me/5491136434026?text=Hola%20Jackie!%20Vengo%20desde%20la%20web%20Botiquín%20para%20el%20Alma" target="_blank" class="btn-ws" style="background: var(--gold); color: black; width: 80%;">Consultar a Jackie</a>
                 </div>
-
                 <div class="bio-card">
-                    <div style="font-size: 3rem; margin-bottom: 10px;">🧘‍♀️</div>
-                    <h3 style="font-family: 'Cinzel', serif; margin: 0;">Dany Pignatelli</h3>
-                    <p style="font-size: 0.9rem; color: var(--gold); margin-top: 5px;">Terapeuta Holística & Coach</p>
-                    <p style="font-size: 0.85rem; padding: 0 10px;">Acompañamiento integral a través del Coaching y terapias vibracionales.</p>
-                    
-                    <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 20px;">
-                        <a href="https://instagram.com/nirvanainfinita1" target="_blank" class="btn-ws" style="background: transparent; border: 1px solid var(--gold); margin: 0;">📸 Instagram</a>
-                        <a href="https://wa.me/5491166483060?text=Hola%20Dany!%20Vengo%20desde%20la%20web%20Botiquín%20para%20el%20Alma%20✨" target="_blank" class="btn-ws" style="background: var(--gold); color: black; margin: 0;">💬 Consultar a Dany</a>
-                    </div>
+                    <div style="font-size: 2.5rem;">🧘‍♀️</div>
+                    <h3>Dany Pignatelli</h3>
+                    <p style="color: var(--gold); font-size: 0.9rem;">@nirvanainfinita1</p>
+                    <a href="https://instagram.com/nirvanainfinita1" target="_blank" class="btn-ws" style="background: transparent; border: 1px solid var(--gold); margin-bottom: 10px; width: 80%;">Instagram</a>
+                    <a href="https://wa.me/5491166483060?text=Hola%20Dany!%20Vengo%20desde%20la%20web%20Botiquín%20para%20el%20Alma" target="_blank" class="btn-ws" style="background: var(--gold); color: black; width: 80%;">Consultar a Dany</a>
                 </div>
             </div>
         </section>
+    </div>
+
+    <footer style="text-align: center; padding: 60px; opacity: 0.5; font-size: 0.8rem;">
+        &copy; 2026 Botiquín para el Alma <br> San Vicente, Buenos Aires.
+    </footer>
+
+</body>
+</html>
