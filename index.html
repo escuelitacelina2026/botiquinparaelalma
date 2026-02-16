@@ -7,12 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { --gold: #d4af37; --dark: #121212; --soft-gold: #f4e4bc; --white: #ffffff; }
-        body { background-color: var(--dark); color: var(--white); font-family: 'Montserrat', sans-serif; margin: 0; scroll-behavior: smooth; }
+        body { background-color: var(--dark); color: var(--white); font-family: 'Montserrat', sans-serif; margin: 0; scroll-behavior: smooth; overflow-x: hidden; }
         header { background: #000; padding: 40px 20px; text-align: center; border-bottom: 3px solid var(--gold); }
         
         /* LOGO */
-        .logo-img { max-width: 200px; height: auto; margin-bottom: 15px; filter: drop-shadow(0 0 5px var(--gold)); }
-        
+        .logo-img { max-width: 200px; height: auto; margin-bottom: 15px; filter: drop-shadow(0 0 5px var(--gold)); animation: levitate 3s ease-in-out infinite; }
+        @keyframes levitate { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+
         h1 { font-family: 'Cinzel', serif; color: var(--gold); margin: 0; font-size: 2.2rem; }
         nav { background: #1a1a1a; text-align: center; padding: 15px; position: sticky; top: 0; border-bottom: 1px solid var(--gold); z-index: 1000; }
         nav a { color: var(--soft-gold); text-decoration: none; margin: 0 15px; font-weight: 600; text-transform: uppercase; font-size: 0.8rem; }
@@ -23,21 +24,24 @@
         
         /* TALLER DETALLADO */
         .taller-box { border: 2px solid var(--gold); padding: 30px; background: rgba(212, 175, 55, 0.05); border-radius: 15px; margin-top: 20px; }
-        .check-list { list-style: none; padding: 0; }
+        .check-list { list-style: none; padding: 0; text-align: left; }
         .check-list li { margin-bottom: 10px; padding-left: 25px; position: relative; }
-        .check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: bold; }
+        .check-list li::before { content: '✅'; position: absolute; left: 0; }
         
-        .btn-ws { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 15px; font-weight: bold; transition: 0.3s; }
+        .btn-ws { background: #25d366; color: white; padding: 12px 25px; text-decoration: none; border-radius: 50px; display: inline-block; margin-top: 15px; font-weight: bold; transition: 0.3s; border: none; cursor: pointer; }
+        .btn-ws:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
+        
         .grid-bio { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
         .bio-card { background: #1a1a1a; padding: 25px; border-radius: 10px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.3); }
         .mantra-box { margin-top: 40px; padding: 30px; border: 1px solid var(--gold); background: rgba(212, 175, 55, 0.05); font-style: italic; text-align: center; line-height: 2; color: var(--soft-gold); border-radius: 15px; }
+        
         @media (max-width: 600px) { .service-card { flex-direction: column; text-align: center; } .price { text-align: center; margin-top: 10px; } .grid-bio { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="botiquin.png" alt="Botiquín para el Alma Logo" class="logo-img">
+        <img src="botiquin.png" alt="Logo" class="logo-img">
         <h1>Botiquín para el Alma</h1>
         <p style="color: var(--soft-gold); font-style: italic;">Daniela y Jacqueline Pignatelli - Terapeutas Holísticas</p>
     </header>
@@ -52,60 +56,59 @@
         
         <section id="sesiones">
             <h2 class="category-title">💫 Sanación y Limpieza</h2>
-            <div class="service-card"><span>Sanación Reiki a Distancia (Sesión personalizada)</span><span class="price">$35.000</span></div>
-            <div class="service-card"><span>Limpieza Energética Personal (Mesa Cuántica)</span><span class="price">$40.000</span></div>
+            <div class="service-card"><span>Limpieza Energética Personal - Mesa Cuántica</span><span class="price">$40.000</span></div>
             <div class="service-card"><span>Limpieza Personal + Protocolos Especiales</span><span class="price">$50.000</span></div>
-            <div class="service-card"><span>Sesión de Péndulo Hebreo</span><span class="price">$40.000</span></div>
-
+            
             <h2 class="category-title">🏠 Limpieza de Espacios</h2>
-            <div class="service-card"><span>Limpieza de Hogares 🏠</span><span class="price">Desde $40.000</span></div>
-            <div class="service-card"><span>Limpieza de Negocios 🏢</span><span class="price">Desde $40.000</span></div>
+            <div class="service-card"><span>Limpieza de Hogares 🏠 (Según dimensión)</span><span class="price">Desde $40.000</span></div>
+            <div class="service-card"><span>Limpieza de Negocios 🏢 (Según dimensión)</span><span class="price">Desde $40.000</span></div>
 
             <h2 class="category-title">🌌 Canalización</h2>
             <div class="service-card"><span>Liberación Almas Desencarnadas + Mensaje Mediumnico 🕊️</span><span class="price">$45.000</span></div>
-            <div class="service-card"><span>Traducción de la Luz (Registros Akáshicos)</span><span class="price">$45.000</span></div>
+            <div class="service-card"><span>Traducción de la Luz - (Registros Akáshicos)</span><span class="price">$45.000</span></div>
 
             <h2 class="category-title">💫 Acompañamiento Terapéutico</h2>
-            <div class="service-card"><span>Coaching Integral Transformacional</span><span class="price">$35.000</span></div>
-            <div class="service-card"><span>Biodecodificación</span><span class="price">$35.000</span></div>
-            <div class="service-card"><span>Constelaciones Individuales</span><span class="price">$50.000</span></div>
+            <div class="service-card"><span>Sesiones de Coaching Integral Transformacional</span><span class="price">$35.000</span></div>
+            <div class="service-card)<span>Constelaciones Individuales</span><span class="price">$50.000</span></div>
+
+            <h2 class="category-title">🌟 Información del Ser</h2>
+            <div class="service-card"><span>Numerología Transgeneracional + Mensaje Oráculo</span><span class="price">$20.000</span></div>
 
             <h2 class="category-title">🔮 Consultas Oraculares</h2>
-            <div class="service-card"><span>Numerología Transgeneracional</span><span class="price">$35.000</span></div>
-            <div class="service-card"><span>Tarot Evolutivo Conductual</span><span class="price">$40.000</span></div>
+            <div class="service-card"><span>Tarot Evolutivo Conductual</span><span class="price">Desde $25.000</span></div>
             <div class="service-card"><span>Sesiones de I Ching</span><span class="price">$45.000</span></div>
         </section>
 
         <section id="talleres">
-            <h2 class="category-title">📚 Taller Destacado</h2>
+            <h2 class="category-title">📚 Formaciones y Talleres</h2>
             <div class="taller-box">
-                <span style="background: var(--gold); color: black; padding: 4px 12px; font-weight: bold; border-radius: 4px; font-size: 0.8rem;">¡DISPONIBLE! - FEBRERO/MARZO</span>
-                <h3 style="font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--gold); margin: 20px 0 10px 0;">🛸 TALLER PÉNDULO EXPRESS ✨</h3>
+                <span style="background: var(--gold); color: black; padding: 4px 12px; font-weight: bold; border-radius: 4px;">DISPONIBLE FEBRERO/MARZO</span>
+                <h3 style="font-family: 'Cinzel', serif; font-size: 1.8rem; color: var(--gold); margin: 20px 0;">🛸 TALLER PÉNDULO EXPRESS ✨</h3>
                 <p>Tu puerta de entrada al mundo de la Radiestesia. Diseñé este taller para que domines el péndulo con seguridad, confianza y precisión.</p>
                 
-                <h4 style="color: var(--gold);">🌟 ¿PARA QUIÉN ES?</h4>
+                <h4 style="color: var(--gold);">🌟 ¿PARA QUIÉN ES ESTE TALLER?</h4>
                 <ul class="check-list">
-                    <li>Terapeutas en busca de diagnóstico efectivo.</li>
-                    <li>Principiantes en terapias alternativas.</li>
-                    <li>Buscadores de guía diaria clara.</li>
+                    <li>Terapeutas que buscan una herramienta de diagnóstico efectiva.</li>
+                    <li>Principiantes que desean iniciarse desde cero.</li>
+                    <li>Buscadores que quieran respuestas claras en su guía diaria.</li>
                 </ul>
 
                 <h4 style="color: var(--gold);">🔥 LO QUE RECIBÍS:</h4>
                 <ul class="check-list">
-                    <li><strong>🔑 Acceso Aula Virtual (3 meses):</strong> Plataforma mística interactiva.</li>
-                    <li><strong>📥 PDF Maestro de por vida:</strong> Material técnico descargable.</li>
-                    <li><strong>🎓 Método Práctico:</strong> Limpieza, consagración y armonización.</li>
-                    <li><strong>🤝 Asesoría Personalizada:</strong> Soporte por un mes.</li>
+                    <li><strong>🔑 ACCESO AULA VIRTUAL (3 meses):</strong> Plataforma interactiva.</li>
+                    <li><strong>📥 PDF MAESTRO DE POR VIDA:</strong> Material técnico descargable.</li>
+                    <li><strong>🎓 MÉTODO PRÁCTICO:</strong> Limpieza, consagración y Chakras.</li>
+                    <li><strong>🤝 ASESORÍA PERSONALIZADA:</strong> Soporte durante un mes.</li>
                 </ul>
 
                 <div style="background: rgba(212, 175, 55, 0.2); padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center;">
                     <p style="margin: 0; font-size: 1.3rem;"><strong>VALOR PROMO: $35.000</strong></p>
-                    <p style="margin: 5px 0 0 0; font-size: 0.8rem; opacity: 0.8;">⏳ Válido hasta fines de Marzo</p>
+                    <p style="margin: 5px 0 0 0; font-size: 0.8rem;">⏳ Válido hasta fines de Marzo</p>
                 </div>
                 
-                <center>
+                <div style="text-align: center;">
                     <a href="https://wa.me/5491136434026?text=Hola!%20Quiero%20inscribirme%20al%20Taller%20de%20Pendulo%20Express%20🛸" target="_blank" class="btn-ws">Solicitar link de inscripción</a>
-                </center>
+                </div>
             </div>
         </section>
 
@@ -120,66 +123,49 @@
                 <div class="bio-card">
                     <div style="font-size: 2.5rem;">🛸</div>
                     <h3>Jackie Pignatelli</h3>
-                    <p style="color: var(--gold); font-size: 0.9rem;">@nave.arcturiana</p>
-                    <a href="https://instagram.com/nave.arcturiana" target="_blank" class="btn-ws" style="background: transparent; border: 1px solid var(--gold); margin-bottom: 10px; width: 85%;">Seguir en Instagram</a>
-                    <a href="https://wa.me/5491136434026?text=Hola%20Jackie!%20Vengo%20desde%20la%20web%20Botiquín%20para%20el%20Alma" target="_blank" class="btn-ws" style="background: var(--gold); color: black; width: 85%;">Consultar a Jackie</a>
+                    <p style="color: var(--gold);">@nave.arcturiana</p>
+                    <a href="https://instagram.com/nave.arcturiana" target="_blank" class="btn-ws" style="background: transparent; border: 1px solid var(--gold); margin-bottom: 10px; width: 85%;">Instagram</a>
+                    <a href="https://wa.me/5491136434026?text=Hola%20Jackie!%20Vengo%20desde%20la%20web" target="_blank" class="btn-ws" style="background: var(--gold); color: black; width: 85%;">WhatsApp Jackie</a>
                 </div>
                 <div class="bio-card">
                     <div style="font-size: 2.5rem;">🧘‍♀️</div>
                     <h3>Dany Pignatelli</h3>
-                    <p style="color: var(--gold); font-size: 0.9rem;">@nirvanainfinita1</p>
-                    <a href="https://instagram.com/nirvanainfinita1" target="_blank" class="btn-ws" style="background: transparent; border: 1px solid var(--gold); margin-bottom: 10px; width: 85%;">Seguir en Instagram</a>
-                    <a href="https://wa.me/5491166483060?text=Hola%20Dany!%20Vengo%20desde%20la%20web%20Botiquín%20para%20el%20Alma" target="_blank" class="btn-ws" style="background: var(--gold); color: black; width: 85%;">Consultar a Dany</a>
+                    <p style="color: var(--gold);">@nirvanainfinita1</p>
+                    <a href="https://instagram.com/nirvanainfinita1" target="_blank" class="btn-ws" style="background: transparent; border: 1px solid var(--gold); margin-bottom: 10px; width: 85%;">Instagram</a>
+                    <a href="https://wa.me/5491166483060?text=Hola%20Dany!%20Vengo%20desde%20la%20web" target="_blank" class="btn-ws" style="background: var(--gold); color: black; width: 85%;">WhatsApp Dany</a>
                 </div>
             </div>
         </section>
     </div>
 
     <footer style="text-align: center; padding: 60px; opacity: 0.5; font-size: 0.8rem;">
-        &copy; 2026 Botiquín para el Alma <br> San Vicente, Buenos Aires.
+        &copy; 2026 Botiquín para el Alma - San Vicente.
     </footer>
-<script>
-    document.addEventListener('mousemove', function(e) {
-        crearDestello(e.pageX, e.pageY);
-    });
 
-    document.addEventListener('touchstart', function(e) {
-        crearDestello(e.touches[0].pageX, e.touches[0].pageY);
-    });
+    <script>
+        function crearDestello(x, y) {
+            const estrella = document.createElement('div');
+            estrella.innerHTML = '✨';
+            estrella.style.position = 'absolute';
+            estrella.style.left = x + 'px';
+            estrella.style.top = y + 'px';
+            estrella.style.fontSize = Math.random() * (20 - 10) + 10 + 'px';
+            estrella.style.color = '#d4af37';
+            estrella.style.textShadow = '0 0 5px #fff, 0 0 10px #d4af37';
+            estrella.style.pointerEvents = 'none';
+            estrella.style.zIndex = '9999';
+            estrella.style.transition = 'all 0.8s ease-out';
+            document.body.appendChild(estrella);
 
-    function crearDestello(x, y) {
-        const estrella = document.createElement('div');
-        estrella.innerHTML = '✨'; // Puedes cambiarlo por '⭐' o '✦'
-        estrella.style.position = 'absolute';
-        estrella.style.left = x + 'px';
-        estrella.style.top = y + 'px';
-        estrella.style.fontSize = Math.random() * (20 - 10) + 10 + 'px';
-        estrella.style.color = '#d4af37';
-        estrella.style.textShadow = '0 0 5px #fff, 0 0 10px #d4af37';
-        estrella.style.pointerEvents = 'none';
-        estrella.style.zIndex = '9999';
-        estrella.style.transition = 'all 1s ease-out';
-        
-        document.body.appendChild(estrella);
+            setTimeout(() => {
+                estrella.style.transform = `translate(${(Math.random() - 0.5) * 50}px, ${(Math.random() - 0.5) * 50}px) scale(0)`;
+                estrella.style.opacity = '0';
+            }, 10);
+            setTimeout(() => { estrella.remove(); }, 800);
+        }
 
-        // Animación de dispersión
-        setTimeout(() => {
-            estrella.style.transform = `translate(${(Math.random() - 0.5) * 100}px, ${(Math.random() - 0.5) * 100}px) scale(0)`;
-            estrella.style.opacity = '0';
-        }, 10);
-
-        // Limpiar el elemento del código para que no sea pesada la página
-        setTimeout(() => {
-            estrella.remove();
-        }, 1000);
-    }
-</script>
-
-<style>
-    /* Estilo para que los destellos no interfieran con los clics */
-    body {
-        overflow-x: hidden; /* Evita scroll lateral por los destellos */
-    }
-</style>
+        document.addEventListener('mousemove', (e) => crearDestello(e.pageX, e.pageY));
+        document.addEventListener('touchstart', (e) => crearDestello(e.touches[0].pageX, e.touches[0].pageY));
+    </script>
 </body>
 </html>
