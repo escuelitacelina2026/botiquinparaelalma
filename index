@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botiquín para el Alma - Terapias Holísticas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #121212;
+            --soft-gold: #f4e4bc;
+            --text: #ffffff;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('URL_DE_FONDO_MISTICO');
+            background-size: cover;
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--gold);
+        }
+
+        h1 { font-family: 'Cinzel', serif; color: var(--gold); font-size: 2.5em; margin: 0; }
+        .subtitle { font-style: italic; color: var(--soft-gold); margin-top: 10px; }
+
+        /* --- NAVEGACIÓN --- */
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #1a1a1a;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        nav a {
+            color: var(--soft-gold);
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+
+        /* --- SECCIONES --- */
+        .container { max-width: 1000px; margin: auto; padding: 40px 20px; }
+
+        .service-category { margin-bottom: 50px; }
+        .category-title {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-card {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 4px solid var(--gold);
+            transition: 0.3s;
+        }
+
+        .service-card:hover { background: rgba(212, 175, 55, 0.1); transform: translateX(5px); }
+
+        .price { color: var(--gold); font-weight: bold; font-size: 1.1em; white-space: nowrap; margin-left: 15px; }
+
+        /* --- TALLERES (DESTACADO) --- */
+        .taller-destacado {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0,0,0,0.5));
+            border: 2px solid var(--gold);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .promo-tag {
+            background: var(--gold);
+            color: black;
+            padding: 5px 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        /* --- INFO TERAPEUTAS --- */
+        .bio-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .terapeuta-box {
+            background: #1a1a1a;
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .social-link {
+            display: block;
+            color: var(--gold);
+            text-decoration: none;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        footer { text-align: center; padding: 40px; font-size: 0.8em; opacity: 0.7; }
+
+        @media (max-width: 768px) {
+            .service-card { flex-direction: column; text-align: center; }
+            .price { margin-top: 10px; }
+            .bio-section { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Botiquín para el Alma</h1>
+        <p class="subtitle">Unión de Terapias Holísticas para el despertar del ser</p>
+    </header>
+
+    <nav>
+        <a href="#sesiones">Sesiones</a>
+        <a href="#talleres">Talleres</a>
+        <a href="#nosotras">Nosotras</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="sesiones" class="service-category">
+            <h2 class="category-title">💫 Sanación y Limpieza</h2>
+            <div class="service-card">
+                <div><strong>Limpieza Energética Personal</strong><br><small>Mesa Cuántica</small></div>
+                <div class="price">$40.000</div>
+            </div>
+            <div class="service-card">
+                <div><strong>Limpieza Personal + Protocolos Especiales</strong><br><small>Sanación específica - Mesa Cuántica</small></div>
+                <div class="price">$50.000</div>
+            </div>
+
+            <h2 class="category-title">🏠 Limpieza de Espacios</h2>
+            <div class="service-card">
+                <div><strong>Limpieza de Hogares 🏠</strong></div>
+                <div class="price">Desde $40.000*</div>
+            </div>
+            <div class="service-card">
+                <div><strong>Limpieza de Negocios 🏢</strong></div>
+                <div class="price">Desde $40.000*</div>
+            </div>
+            <p style="font-size: 0.8em;">*Valor de acuerdo a la dimensión del espacio.</p>
+
+            <h2 class="category-title">🌌 Canalización</h2>
+            <div class="service-card">
+                <div><strong>Liberación Almas Desencarnadas + Mensaje Mediumnico 🕊️</strong></div>
+                <div class="price">$45.000</div>
+            </div>
+            <div class="service-card">
+                <div><strong>Traducción de la Luz (Registros Akáshicos)</strong></div>
+                <div class="price">$45.000</div>
+            </div>
+
+            <h2 class="category-title">💫 Acompañamiento Terapéutico</h2>
+            <div class="service-card">
+                <div><strong>Coaching Integral Transformacional</strong></div>
+                <div class="price">$35.000</div>
+            </div>
+            <div class="service-card">
+                <div><strong>Constelaciones Individuales</strong></div>
+                <div class="price">$50.000</div>
+            </div>
+
+            <h2 class="category-title">🌟 Información del Ser</h2>
+            <div class="service-card">
+                <div><strong>Numerología Transgeneracional + Oráculo Arcturiano</strong></div>
+                <div class="price">$20.000</div>
+            </div>
+
+            <h2 class="category-title">🔮 Consultas Oraculares</h2>
+            <div class="service-card">
+                <div><strong>Tarot Evolutivo Conductual</strong></div>
+                <div class="price">Desde $25.000</div>
+            </div>
+            <div class="service-card">
+                <div><strong>Sesiones de I Ching</strong></div>
+                <div class="price">$45.000</div>
+            </div>
+            
+            <p style="text-align: center; font-style: italic; margin-top: 20px;">
+                "Todas las sesiones son a distancia. Se reserva el turno abonando mediante transferencia."
+            </p>
+        </section>
+
+        <section id="talleres" class="service-category">
+            <h2 class="category-title">📚 Formaciones y Cursos</h2>
+            <div class="taller-destacado">
+                <div class="promo-tag">¡DISPONIBLE!</div>
+                <h3>🛸 TALLER PÉNDULO EXPRESS ✨</h3>
+                <p>Tu puerta de entrada al mundo de la Radiestesia. Dominá el péndulo con seguridad, confianza y precisión.</p>
+                
+                <strong>¿Qué recibís?</strong>
+                <ul>
+                    <li>🔑 Acceso Aula Virtual (3 meses)</li>
+                    <li>📥 PDF Maestro de por vida</li>
+                    <li>🎓 Método práctico: Limpieza, consagración y Chakras</li>
+                    <li>🤝 Asesoría personalizada por 1 mes</li>
+                </ul>
+
+                <div class="price" style="font-size: 1.5em; display: block; margin: 20px 0;">
+                    VALOR PROMO: $35.000 
+                    <span style="font-size: 0.5em; color: var(--soft-gold);">(Hasta fines de Marzo)</span>
+                </div>
+                
+                <a href="https://wa.me/TU_NUMERO" class="whatsapp-btn">🚀 SOLICITAR LINK DE INSCRIPCIÓN</a>
+            </div>
+            <p style="text-align: center; margin-top: 20px;">Cursos a distancia armados a tu medida. ¡Consultanos!</p>
+        </section>
+
+        <section id="nosotras" class="service-category">
+            <h2 class="category-title">👤 Sobre Nosotras</h2>
+            <div class="bio-section">
+                <div class="terapeuta-box">
+                    <h3>Jacqueline Pignatelli</h3>
+                    <p>Terapeuta Holística</p>
+                    <a href="https://instagram.com/nave.arcturiana" class="social-link">@nave.arcturiana</a>
+                    <a href="https://wa.me/NUMERO_JACKIE" class="whatsapp-btn">Escribir a Jackie</a>
+                </div>
+                <div class="terapeuta-box">
+                    <h3>Daniela Pignatelli</h3>
+                    <p>Terapeuta Holística</p>
+                    <a href="https://instagram.com/nirvanainfinita1" class="social-link">@nirvanainfinita1</a>
+                    <a href="https://wa.me/NUMERO_DANY" class="whatsapp-btn">Escribir a Dany</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Botiquín para el Alma. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
