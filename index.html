@@ -53,6 +53,38 @@
         .bio-card { background: #1a1a1a; padding: 25px; border-radius: 10px; text-align: center; border: 1px solid rgba(212, 175, 55, 0.3); }
         
         @media (max-width: 600px) { .service-card { flex-direction: column; text-align: center; } .price { text-align: center; margin-top: 10px; } .grid-bio { grid-template-columns: 1fr; } h1 { font-size: 1.8rem; } }
+
+        /* Efectos para Celular */
+@media (max-width: 768px) {
+    /* Las tarjetas reaccionan al toque */
+    .service-card:active, .special-box:active {
+        transform: scale(0.98);
+        background: rgba(212, 175, 55, 0.15);
+        transition: 0.1s;
+    }
+
+    /* Brillo pulsante para el Oráculo y el Taller */
+    .oraculo-box {
+        animation: pulsePurple 3s infinite alternate;
+    }
+    .special-box:not(.oraculo-box) {
+        animation: pulseGold 3s infinite alternate;
+    }
+
+    @keyframes pulsePurple {
+        from { box-shadow: 0 0 10px rgba(162, 155, 254, 0.2); }
+        to { box-shadow: 0 0 25px rgba(162, 155, 254, 0.5); }
+    }
+    @keyframes pulseGold {
+        from { box-shadow: 0 0 10px rgba(212, 175, 55, 0.1); }
+        to { box-shadow: 0 0 25px rgba(212, 175, 55, 0.4); }
+    }
+
+    /* Evitar que el texto se vea muy amontonado */
+    .subtitle { font-size: 1rem; }
+    h1 { font-size: 1.8rem; }
+}
+        
     </style>
 </head>
 <body>
