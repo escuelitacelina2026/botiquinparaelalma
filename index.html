@@ -222,10 +222,13 @@
             }, 20);
             setTimeout(() => { estrella.remove(); }, 800);
         }
-        document.addEventListener('mousemove', (e) => crearDestello(e.pageX, e.pageY));
-        document.addEventListener('touchstart', (e) => {
-            const touch = e.touches[0];
-            crearDestello(touch.pageX, touch.pageY);
+      document.addEventListener('touchstart', (e) => {
+    // Esto hace que salgan estrellas donde tocas con el dedo
+    const touch = e.touches[0];
+    for(let i=0; i<3; i++) { // Crea 3 chispitas por cada toque
+        crearDestello(touch.pageX, touch.pageY);
+    }
+});
         });
     </script>
 </body>
