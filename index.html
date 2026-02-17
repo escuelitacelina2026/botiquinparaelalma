@@ -32,14 +32,16 @@
         /* SECCION ORACULO */
         .oraculo-box { border-color: var(--purple); background: rgba(142, 68, 173, 0.05); }
         .oraculo-img { 
-            max-width: 200px; 
+            max-width: 180px; 
             border-radius: 10px; 
-            margin-bottom: 20px; 
+            margin: 15px auto; 
+            display: block;
             box-shadow: 0 0 20px rgba(162, 155, 254, 0.3);
             border: 1px solid var(--purple);
         }
+        .oraculo-desc { max-width: 600px; margin: 0 auto 20px auto; line-height: 1.6; color: var(--white); }
 
-        .check-list { list-style: none; padding: 0; text-align: left; max-width: 500px; margin: 20px auto; }
+        .check-list { list-style: none; padding: 0; text-align: left; max-width: 550px; margin: 20px auto; }
         .check-list li { margin-bottom: 10px; padding-left: 25px; position: relative; }
         .check-list li::before { content: '✨'; position: absolute; left: 0; }
         
@@ -100,14 +102,19 @@
                 
                 <img src="oraculo.png" alt="Oráculo Arcturiano" class="oraculo-img">
                 
-                <p>Un oráculo canalizado por <strong>Jackie Pignatelli</strong> para acompañar tu día a día con la frecuencia de la energía Arcturiana.</p>
+                <div class="oraculo-desc">
+                    Un oráculo canalizado por <strong>Jackie Pignatelli</strong> para acompañar tu día a día con la frecuencia de la energía Arcturiana.
+                </div>
                 
                 <ul class="check-list">
                     <li>🎯 Ideal para recibir un mensaje de luz en tu día a día.</li>
                     <li>💼 Si sos terapeuta, podés complementar la sesión dando un mensaje a tu consultante.</li>
-                    <li>📥 Las cartas se descargan en PDF de alta calidad.</li>
-                    <li>🖨️ ¡Podés imprimirlas como prefieras!</li>
+                    <li>📥 Las cartas se descargan en PDF de alta calidad listo para imprimir.</li>
                 </ul>
+
+                <div style="background: rgba(108, 92, 231, 0.2); padding: 15px; border-radius: 10px; margin: 20px auto; max-width: 300px; border: 1px solid var(--purple);">
+                    <p style="margin: 0; font-size: 1.3rem; color: var(--purple);"><strong>VALOR: $12.000</strong></p>
+                </div>
 
                 <a href="https://wa.me/5491136434026?text=Hola%20Jackie!%20Quiero%20adquirir%20el%20Oraculo%20Arcturiano%20en%20PDF" target="_blank" class="btn-ws btn-purp">Adquirir Oráculo</a>
             </div>
@@ -127,7 +134,7 @@
                     <li>🤝 Asesoría personalizada durante un mes.</li>
                 </ul>
 
-                <div style="background: rgba(212, 175, 55, 0.2); padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center;">
+                <div style="background: rgba(212, 175, 55, 0.2); padding: 15px; border-radius: 10px; margin: 20px auto; max-width: 300px;">
                     <p style="margin: 0; font-size: 1.3rem;"><strong>VALOR PROMO: $35.000</strong></p>
                 </div>
                 
